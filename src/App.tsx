@@ -10,7 +10,7 @@ import Dashboard from "./pages/Dashboard";
 import AddApplicationPage from "./pages/Applications/add";
 import ApplicationView from "./pages/Applications/view";
 import ApplicationEdit from "./pages/Applications/edit";
-import LogsPage from "./pages/Logs/LogsPage";
+import LogsPage from "./pages/Logs";
 import TasksPage from "./pages/Tasks/TasksPage";
 import AddTask from "./pages/Tasks/AddTask";
 import ReviewsPage from "./pages/Reviews/ReviewsPage";
