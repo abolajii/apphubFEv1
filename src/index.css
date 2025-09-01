@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fix for Select/Dropdown components appearing behind cards */
+/* Ensure dropdowns appear above all other content */
+[data-radix-popper-content-wrapper],
+[data-reach-popover],
+[role="listbox"],
+[role="menu"],
+[role="tooltip"],
+.select-dropdown,
+.multiselect-dropdown,
+.dropdown-menu,
+[class*="select"][class*="dropdown"],
+[class*="multi"][class*="select"] {
+  z-index: 9999 !important;
+  position: relative !important;
+}
+
+/* Ensure parent containers don't clip dropdowns */
+.card-container,
+[class*="card"],
+.overflow-hidden {
+  overflow: visible !important;
+}
+
+/* Specific fixes for common UI library patterns */
+.relative:has(.select-dropdown),
+.relative:has([role="listbox"]),
+.relative:has([class*="select"]),
+.relative:has([class*="multi"]) {
+  overflow: visible !important;
+}
+
+/* Form and grid containers should allow overflow */
+form,
+.grid,
+[class*="grid"],
+.space-y-6,
+.space-y-4 {
+  overflow: visible !important;
+}
+
+/* Additional z-index layers for complex layouts */
+.modal-backdrop {
+  z-index: 9998 !important;
+}
+
+.tooltip {
+  z-index: 10000 !important;
+}
+
+/* Make sure abolaji-ux-kit Select components work properly */
+.ux-kit-select,
+.ux-kit-multiselect,
+[data-component="select"],
+[data-component="multiselect"] {
+  z-index: 9999 !important;
+}
+
+/* Override any potential conflicting overflow settings */
+.container,
+.main-content,
+.content-wrapper {
+  overflow: visible !important;
+}
