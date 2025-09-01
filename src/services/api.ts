@@ -1,4 +1,4 @@
-const API_BASE = "https://apphub-seven.vercel.app/api/v1";
+const API_BASE = "https://apphub.inabsolutions.com/api/v1";
 
 export interface Application {
   id: number;
@@ -219,7 +219,7 @@ class ApiClient {
 
   // Health check
   async healthCheck(): Promise<{ status: string; timestamp: string }> {
-    const response = await fetch("https://apphub-seven.vercel.app/health");
+    const response = await fetch("https://apphub.inabsolutions.com/health");
     return response.json();
   }
 
